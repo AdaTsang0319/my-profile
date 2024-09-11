@@ -2,13 +2,19 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const today = new Date().toDateString();
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+        <div style={{flexDirection:'row'}}> 
+          <p style={{border:'none'}}>
+            Today is {today}
+          </p>
+          <p>
+            Get started by editing&nbsp;
+            <code className={styles.code}>src/app/page.js</code>
+          </p>
+        </div>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
